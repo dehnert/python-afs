@@ -24,6 +24,9 @@ which will build the C extensions in place next to their source,
 allowing you to import the various modules, so long as your current
 working directory is the root of the PyAFS source tree.
 
+Debian
+------
+
 Alternatively, PyAFS has been packaged for Debian and Ubuntu. To build
 the Debian package of the latest release, run::
 
@@ -35,5 +38,14 @@ You will need the devscripts and git-buildpackage packages installed,
 as well as this package's build dependencies (cdbs, debhelper,
 python-all-dev, python-support, python-pyrex, python-setuptools,
 libopenafs-dev).
+
+NixOS
+-----
+
+To build PyAFS on NixOS, start a shell with the depedencies using:
+
+  $ nix-shell -p python3.pkgs.cython -p python3.pkgs.setuptools -p python3.pkgs.nose -p openafs -p krb5
+
+After that, `setup.py` should work.
 
 .. _Cython: http://cython.org/
