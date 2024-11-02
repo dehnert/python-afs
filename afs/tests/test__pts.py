@@ -1,6 +1,5 @@
 import os
 from afs._pts import PTS
-import nose
 import unittest
 
 def get_this_cell():
@@ -47,4 +46,4 @@ class PTSTestCase(unittest.TestCase):
         self.assertEqual(p._NameOrId(id), id, "PTS._NameOrId can't identify ID.")
 
 if __name__ == '__main__':
-    nose.main()
+    unittest.main()
